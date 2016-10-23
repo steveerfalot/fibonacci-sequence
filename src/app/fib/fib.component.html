@@ -1,2 +1,18 @@
-Enter number: <input [value]="0" #input/> Result: {{ result }} <br />
-<button (click)="getNumber(input)">Get Number</button>
+<div class="fib-body">
+  <div class="input-div">
+    Enter number: <input [(ngModel)]="value" (change)="getNumber()" />
+  </div>
+  <div class="result">
+    <div>
+      Result:
+    </div>
+    <div>
+        {{ result }}
+    </div>
+  </div>
+  <div class="button">
+    <button (click)="getNumber()">
+      Get Number
+    </button>
+  </div>
+</div>
